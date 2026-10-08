@@ -1,0 +1,139 @@
+:root {
+    --rosa-bula: #f36d906a;
+    --verde-bula: #427a5b;
+    --bordo-bula: #9c1b3f;
+    --texto-oscuro: #2c2c2c;
+    --fondo-blanco-transparente: rgba(255, 255, 255, 0.6);
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--rosa-bula);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 3rem 1rem 1rem 1rem;
+}
+
+.logo {
+    max-width: 250px;
+    height: auto;
+    border-radius: 15px;
+    /* Un pequeño sombreado para que destaque sobre el fondo rosa */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Contenedor general de secciones */
+.section-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: var(--fondo-blanco-transparente);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(66, 122, 91, 0.1);
+}
+
+h2 {
+    color: var(--verde-bula);
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Sección Sobre Mí */
+.bio-content p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    color: var(--texto-oscuro);
+}
+
+.bio-content strong {
+    color: var(--verde-bula);
+}
+
+/* Sección Menú */
+.menu-subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: var(--bordo-bula);
+}
+
+.menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px dashed var(--rosa-bula);
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.item-info h3 {
+    color: var(--verde-bula);
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.item-info p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.item-price span {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--bordo-bula);
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--verde-bula);
+    font-weight: 500;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 600px) {
+    .section-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .item-price {
+        align-self: flex-end;
+    }
+}
